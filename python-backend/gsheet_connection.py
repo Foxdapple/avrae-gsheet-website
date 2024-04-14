@@ -1,6 +1,7 @@
 import os
 import csv
 import string
+import json
 
 '''
 Columns are letters
@@ -44,17 +45,17 @@ def get_skill_details(csv_data):
     for i in range(0, 6):
         prof = check_prof(csv_data[start_row][column_prof])
         modifier = csv_data[start_row][column_mod]
-        saving_throws[csv_data[start_row][column_mod_name]] = {prof, modifier}
+        saving_throws[csv_data[start_row][column_mod_name]] = {"Prof": prof, "Mod": modifier}
         start_row += 1
     
     start_row = 24 # Column 25
     for i in range(0, 17):
         prof = check_prof(csv_data[start_row][column_prof])
         modifier = csv_data[start_row][column_mod]
-        skills[csv_data[start_row][column_mod_name]] = {prof, modifier}
+        skills[csv_data[start_row][column_mod_name]] = {"Prof": prof, "Mod": modifier}
         start_row += 1
         
-    return (saving_throws, skills)
+    return [saving_throws, skills]
 
 def get_details(csv_data):
     character = {}
@@ -103,7 +104,14 @@ def create_details(csv_data):
     skills = get_skill_details(csv_data)
     character[character_name]["Saving Throws"] = skills[0]
     character[character_name]["Skills"] = skills[1]
+    
+    create_json(character, character_name)
+    
+def create_json(character, name):
     print(character)
+    
+    with open(name + ".json", "w") as outfile:
+        json.dump(character, outfile)
 
 data = get_data()
 create_details(data)
