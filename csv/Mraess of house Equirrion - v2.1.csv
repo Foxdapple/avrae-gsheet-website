@@ -1,0 +1,190 @@
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Hide these columns. There should be no need to alter them (mostly).
+Customization and homebrew are mostly handled by the Info pages.",,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2.1,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,Draconic Sorcerer 6 Tempest Cleric 2,,,,,,,,,,,,,,,,,,LEVEL,,,,,Gold Dragonborn,"dex +2, cha +1",13+dex,30,-,"Scorching Resistance
+You have resistance to Fire damage.","Common, Draconic",-,-,"Metallic Ancestry
+You have a magical affinity connected to a metallic dragon ancestor, choose which dragon you are connected to from the table below. This also determines the damage type for your other traits",,,10+dex
+,,Mraess Equirrion,,,,,,,,,,,,,,,,,CLASS(ES) & LEVEL(S),,,,,,,,,,,PLAYER NAME,,,,,,,8,,,,,d6,Sorcerer,-,6,26,"Constitution, Charisma, Choose 2, Arcana, Deception, Insight, Intimidation, Persuasion, Religion, Dagger, Dart, Sling, Quarterstaff, Light Crossbow",-,Full Caster,Charisma,0,,,
+,,,,,,,,,,,,,,,,,,,Gold Dragonborn,,,,,,,,,,,"34,000",,,"48,000",,,,,,,,,d8,Cleric,Tempest,2,10,,"Light Armor, Medium Armor, Shields, Martial Weapons, Heavy Armor",Full Caster,Wisdom,0,,,
+,,,,,,,,,,,,,,,,,,,RACE,,,,,,,,,,,EXPERIENCE,,,NEXT LEVEL,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,HP,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,INSPIRATION,,,,,,,,,,, ,,,,,,,,,BACKGROUND:,,,,,Noble,,,,,,,,,,,,,,,,,,,
+,,STR,,,,,,,,,,,,,,,17,,,,+4,,,,30 ft,,,,, I take great pains to always look my ,,,,,,,,,,,,,,,,,,,,,,,,
+,,+1,,,,,,,,,,,,,,,,,,,,,,,,,,,,best and follow the latest fashions. ,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,+3,,,PROFICIENCY BONUS,,,,,,,AC,,,,INIT,,,,SPEED,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,12,,,,,,,,,,,,,,,,,,,,,,,,,,,,PERSONALITY TRAITS,,,,,,,,,,,,,,,,,,,,,,,,
+,,12,,,FALSE,,,,,,,,,,,,Hit Point Max,,,60,,,,,,,,,, Family. Blood runs thicker than water.,,,,,,,,,,,,"History, Persuasion",,2,8,36,Sorcerer,"Constitution, Charisma, Choose 2, Arcana, Deception, Insight, Intimidation, Persuasion, Religion, Dagger, Dart, Sling, Quarterstaff, Light Crossbow, -, Light Armor, Medium Armor, Shields, Martial Weapons, Heavy Armor, -",,,,10+dex,,
+,,DEX,,,FALSE,,〇,+2,Strength,,,,,,,,60,,,,,,,,,,,,,,,,,,,,,,,,,0,,,,,,"Arcana, Deception, Insight, Intimidation, Religion",,,,,,
+,,+4,,,FALSE,,〇,+5,Dexterity,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,0,,,,,,,,,,
+,,,,,FALSE,,◉,+6,Constitution,,,,,,,,CURRENT HIT POINTS,,,,,,,,,,,,,IDEALS,,,,,,,,,,,,,,2,,,,,,,,,,
+,,18,,,FALSE,,〇,-1,Intelligence,,,,,,,,Condition,,,,,,,,,,,,, I will face any challenge to win ,,,,,,,,,,,,,,,,,,,,,,,,
+,,16,,,FALSE,,〇,+2,Wisdom,,,,,,,,,,,,,,,,,,,,,the approval of my family. ,,,,,,,,,,,,,,,,,,,,,,,,
+,,CON,,,FALSE,,◉,+9,Charisma,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,+2,,,FALSE,,SAVING THROWS,,,,,,,,,,TEMPORARY HIT POINTS,,,,,,,,,,,,,BONDS,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, I have an insatiable desire ,,,,,,,,,,,,,,,,,,,,,,,,
+,,14,,,,,〇,+4,Acrobatics,,, (Dex),,,,,6d6 2d8,,,,,,SUC.,〇,〇,〇,,,,for carnal pleasures. ,,,,,,,,,,,,,,,,,,,,,,,,
+,,14,,,,,〇,+1,Animal Handling,,,,(Wis),,,,,,,,,,FAIL.,〇,〇,〇,,,,,,,,,,,,,,,,14,14,17,14,,,,,,,,,
+,,INT,,,,,◉,+1,Arcana,,(Int) ,,,,,,HIT DICE,,,,,,DEATH SAVES,,,,,,,FLAWS,,,,,,,,,,,,,,,,,,,,,,,,
+,,-2,,,,,〇,+1,Athletics,,,(Str)    ,,,,,,,,,,,,,,,,,,ALIGNMENT:,,,,,True Neutral,,,,,,,,,,,,,,,,,,,
+,,,,,,,〇,+5,Deception,,,  (Cha) ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,7,,,,,〇,-2,History,,(Int)  ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,7,,,,,◉,+4,Insight,,   (Wis),,,,,,NAME,,,,,,,ATK BONUS,,,,DAMAGE/TYPE,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,WIS,,,,,◉,+8,Intimidation,,, (Cha),,,,,Dagger,,,,,,,+7,,,,"1d4+4[piercing]|***Simple Melee or Ranged Weapon Attack.***
+Finesse, Light, Thrown (range 20/60)
+
+",,,,,,,,,,,,,,Dagger,1d4,piercing,Simple,Melee or Ranged,◉,-,-,-,-,"Finesse, Light, Thrown (range 20/60)",◉,+4
+,,+1,,,,,〇,-2,Investigation,,,  (Int),,,,,Offhand Dagger,,,,,,,+7,,,,"1d4[piercing]|***Simple Melee or Ranged Weapon Attack.***
+Finesse, Light, Thrown (range 20/60)
+
+
+",,,,,,,,,,,,,,Offhand Dagger,1d4,piercing,Simple,Melee or Ranged,◉,-,-,-,-,"Finesse, Light, Thrown (range 20/60)",〇,+4
+,,,,,,,〇,+1,Medicine,,,(Wis)   ,,,,,,,,,,,,-,,,,                 -,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,13,,,,,〇,-2,Nature,, (Int),,,,,,,,,,,,,-,,,,                 -,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,13,,,,,〇,+1,Perception,,,(Wis),,,,,,,,,,,,-,,,,                 -,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,CHA,,,,,〇,+5,Performance,,,(Cha),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,+5,,,,,◉,+8,Persuasion,,,(Cha) ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,〇,-2,Religion,, (Int),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,20,,,,,〇,+4,Sleight of Hand,,,,(Dex),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,17,2,,,,〇,+4,Stealth,,(Dex) ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,〇,+1,Survival,,  (Wis) ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,SKILLS,,,,,,,,,,ATTACKS & NOTES,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,11,,,PASSIVE WISDOM (PERCEPTION),,,,,,,,,,,,Common,,,,,,,,,,,Fine Clothes,,,,,,,,,,,,,,Fine Clothes,0,-,Clothes,-,-,-,-,-,-,-,,
+,,,,,,,,,,,,,,,,,Draconic,,,,,,,,,,,Cloak of Displacement,,,,,,,,,,,,,,Cloak of Displacement,-,-,Wondrous Item,-,-,-,-,-,1,"While you wear this cloak, it projects an Illusion that makes you appear to be standing in a place near your actual Location, causing any creature to have disadvantage on Attack rolls against you. If you take damage, the property ceases to function until the start of your next turn. This property is suppressed while you are Incapacitated, Restrained, or otherwise unable to move.",,
+,,,,,,,,,,,,,,,,,Sylvan,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,Thieves' Cant,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,Armor Proficiencies:,,,,,,"All Armor, Shields",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,Weapon Proficiencies:,,,,,,Simple and Martial Weapons,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,, Vehicle Proficiencies:,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,1 Tool Proficiency:,,,,,,Dragonchess Set,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,Other Proficiencies:,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,Other Speeds:,,,,,,-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,PROFICIENCIES,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,TOO MANY LANGUAGES SELECTED!,,,,,,,,,,,EQUIPPED ITEMS,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3,0,1,,,,,,,,,,
+,,Background Feature,,,,,,,,,,,,,Class Features: Draconic Sorcerer,,,,,,,,,,,,,Class Features: Tempest Cleric,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,Dragon Ancestor: Blue,,,,,,,,,,,,,Divine Domain: Tempest,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,Draconic Resilience,,,,,,,,,,,,,Wrath of the Storm,,,,,,,,,,,,,,,,,,,◅ Language List,◅ Non-race Languages,◅ Backgrounds,◅ Associated Skills,◅ # of Languages,◅ Tool Proficiencies,◅ Vehicle Proficiencies,◅ Sorted for Menus
+,,Racial Features,,,,,,,,,,,,,Font of Magic,,,,,,,,,,,,,Channel Divinity: Destructive Wrath,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,Metallic Ancestry: Gold,,,,,,,,,,,,,Sorcery Points,,,,,,,,,,,,,Harness Divine Power,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,Breath Weapon - command !breath,,,,,,,,,,,,,Flexible Casting,,,,,,,,,,,,,,,,,,,,,,,,,,,"Dagger, Dart, Sling, Quarterstaff, Light Crossbow, Martial Weapons",,,,,,,,,,,,
+,,Draconic Resistance: Fire,,,,,,,,,,,,,Magical Guidance,,,,,,,,,,,,,,,,,,,,,,,,,,,"Light Armor, Medium Armor, Shields, Heavy Armor",,,,,,,,,,,,
+,,Metallic Breath Weapon,,,,,,,,,,,,,Elemental Affinity,,,,,,,,,,,,,,,,,,,,,,,,,,,TRUE,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Common,Thieves' Cant,Acolyte,"Insight, Religion",2,0,0,Aarakocra
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Dwarvish,Druidic,Charlatan,"Deception, Sleight of Hand",0,2,0,Abyssal
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,Metamagic,,,,,,,,,,,,,,,,,,,Elvish,Deep Speech,Criminal,"Deception, Stealth",0,2,0,Aquan
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,Twinned Spell,,,,,,,,,,,,,,,,,,,Halfling,,Entertainer,"Acrobatics, Performance",0,2,0,Auran
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,Quckened Spell,,,,,,,,,,,,,,,,,,,Draconic,,Folk Hero,"Animal Handling, Survival",0,1,1,Celestial
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Gnomish,,Guild Artisan,"Insight, Persuasion",1,1,0,Deep Speech
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Orc,,Hermit,"Medicine, Religion",1,1,0,Draconic
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Infernal,,Noble,"History, Persuasion",1,1,0,Druidic
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Celestial,,Outlander,"Athletics, Survival",1,1,0,Dwarvish
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Giant,,Sage,"Arcana, History",2,0,0,Elvish
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Auran,,Sailor,"Athletics, Perception",0,1,1,Fox
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Aquan,,Soldier,"Athletics, Intimidation",0,1,1,Giant
+,,Feats,,,,,,,,,,,,,,,,,,,,,,,,,,Attunement Slots,,,,,,,,,,,,,,,,,,,Primordial,,Urchin,"Sleight of Hand, Stealth",0,2,0,Gith
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,Cloak of Displacement,,,,,,,,,,,,,,,,,,,Goblin,,,,,,,Gnomish
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Abyssal,,,,,,,Goblin
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Undercommon,,,,,,,Halfling
+,,,,,,,,,,,,,,,FEATURES & TRAITS     ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Gith,,,,,,,Infernal
+,,Right click and 'Insert note' to add details on any box.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Aarakocra,,,,,,,Ivathi
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Quori,,,,,,,Loxodon
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Sylvan,,,,,,,Minotaur
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Loxodon,,,,,,,Orc
+,,,,,,,,,,,,,,,,,,,,SPELLCASTING,,,,,,,SPELL,,,,,,,SPELL,,,,,,,,,,,,,Minotaur,,,,,,,Otteren
+,,Sorcerer,,,,,,,,,,,,,,,,,,Charisma,,,,,,,16,,,,,,,+8,,,,,,,,Sorcerer,0,,,,Vedalken,,,,,,,Primordial
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Cleric,,,,,Fox,,,,,,,Quori
+,,,,,,,,,,,,,,,,,,,,ABILITY,,,,,,,SAVE DC,,,,,,,ATTACK BONUS,,,,,,,,,,,,,Ivathi,,,,,,,Sea Speech
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Thri-Kreen,,,,,,,Squeak Speak
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Squeak Speak,,,,,,,Sylvan
+,,,,,,,,,,,,◉,Mind Sliver,,,,,,,,,◉,Voltaic Blade,,,,,,,,,◉,Twinkle,,,,,,,,,,,,,,Sea Speech,,,,,,,Thieves' Cant
+,,,,,CANTRIPS,,,,,,,◉,Dark Tendril,,,,,,,,,◉,Charging Bolt,,,,,,,,,◉,Spare the Dying,,,,,,,,,,,,,,Otteren,,,,,,,Thri-Kreen
+,,,,,,,,,,,,◉,Lightning Lure,,,,,,,,,◉,,,,,,,,,,◉,Resistance,,,,,,,,,,,,,,,,,,,,,Undercommon
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Vedalken
+,,◉,Shield,,,,,,,,,〇,,,,,,,,,,◉,Bless,,,,,,,,,SLOTS,,,,MAX,,,,,,,,,,,,,,,,,,
+,,◉,Absorb Elements,,,,,,,,,〇,,,,,,,,,,◉,Shield of Faith,,,,,,,,,4,,,,4,,,,,,,,,,,,,,,,,,
+,,◉,Chromatic Orb,,,,,,,,,〇,,,,,,,,,,◉,Healing Word,,,,,,,,,,,,,,,,,,,4,,,,,,,,,,,,
+,,◉,Command,,,,,,,,,〇,,,,,,,,,,◉,Fog Cloud,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,〇,,,,,,,,,,〇,,,,,,,,,,◉,Thunderwave,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,MAX,,,,SLOTS,,,,◉,Misty step,,,,,,,,,◉,Wither and Bloom,,,,,,,,,〇,,,,,,,,,,,,,,,,,,,,,,
+,,,,3,,,,3,,,,◉,Tasha's Mind Whip,,,,,,,,,〇,,,,,,,,,,〇,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,◉,Dragon's Breath,,,,,,,,,〇,,,,,,,,,,〇,,,,,,,,,,3,,,,,,,,,,,,
+,,,,,,,,,,,,◉,See Invisibility,,,,,,,,,〇,,,,,,,,,,〇,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,〇,,,,,,,,,,〇,,,,,,,,,,〇,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,◉,Lightning Bolt,,,,,,,,,〇,,,,,,,,,,〇,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,◉,Counterspell,,,,,,,,,〇,,,,,,,,,,〇,,,,,,,,,,3,,,,3,,,,,,,,,,,,,,,,,,
+,,◉,Fear,,,,,,,,,〇,,,,,,,,,,〇,,,,,,,,,,,,,,,,,,,,3,,,,,,,,,,,,
+,,◉,Fly,,,,,,,,,〇,,,,,,,,,,〇,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,〇,,,,,,,,,,〇,,,,,,,,,,〇,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,〇,,,,,,,,,,〇,,,,,,,,,,〇,,,,,,,,,,,,,,,,,,,,,,
+,,,,2,,,,2,,,,〇,,,,,,,,,,〇,,,,,,,,,,〇,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,〇,,,,,,,,,,〇,,,,,,,,,,〇,,,,,,,,,,2,,,,,,,,,,,,
+,,,,,,,,,,,,〇,,,,,,,,,,〇,,,,,,,,,,〇,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,〇,,,,,,,,,,〇,,,,,,,,,,〇,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,〇,,,,,,,,,,〇,,,,,,,,,,〇,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,〇,,,,,,,,,,〇,,,,,,,,,,〇,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,〇,,,,,,,,,,〇,,,,,,,,,,〇,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,〇,,,,,,,,,,〇,,,,,,,,,,〇,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,〇,,,,,,,,,,〇,,,,,,,,,,〇,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,〇,,,,,,,,,,〇,,,,,,,,,,〇,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,〇,,,,,,,,,,〇,,,,,,,,,,〇,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,〇,,,,,,,,,,〇,,,,,,,,,,〇,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,〇,,,,,,,,,,〇,,,,,,,,,,〇,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,〇,,,,,,,,,,〇,,,,,,,,,,〇,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,〇,,,,,,,,,,〇,,,,,,,,,,〇,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,〇,,,,,,,,,,〇,,,,,,,,,,〇,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,〇,,,,,,,,,,〇,,,,,,,,,,〇,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,〇,,,,,,,,,,〇,,,,,,,,,,〇,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,〇,,,,,,,,,,〇,,,,,,,,,,〇,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,〇,,,,,,,,,,〇,,,,,,,,,,〇,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,Fabled for being nearly a legendary,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,28,,,6'3,,,146 lb.,,,Medium,,,,,,"dragon rider pair, Marquess Iddrom, first ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,AGE,,,HEIGHT,,,WEIGHT,,,SIZE,,,,,,"of his name, and Marchioness Aise, first of",,,,,,,,,,,,,,House Equirrion,,,,,,,,,,,,,,,,,,,,,,,
+,,Female,,,Amber,,,Golden,,,Fair,,,,,,her name were elevated to their station,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,GENDER,,,EYES,,,HAIR,,,SKIN,,,,,,and anointed to house Equirrion.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,Along with their new station came the ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,"March of Dragonsgrace, covered in open",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,plains and mountainous regions perfect,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,for racing. Keeping the secrets to their ,,,,,,,,,,,,,,,,,,,,,,,,,Name,Top,Bottom,,,,,,,,,,
+,,,,,,,,,,,,,,,,,technique within the family and branch,,,,,,,,,,,,,,,,,,,,,,,,,Dragon,http://i.imgur.com/3GVZzam.png,http://i.imgur.com/miU7se3.png,,,,,,,,,,
+,,,,,,,,,,,,,,,,,houses for generations.,,,,,,,,,,,,,,,,,,,,,,,,,Undead,http://i.imgur.com/Yw2rhH6.png,http://i.imgur.com/pDLyws9.png,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Magic,http://i.imgur.com/Pnzh0Lq.png,http://i.imgur.com/pDLyws9.png,,,,,,,,,,
+,,,,,,,,,,,,,,,,,House Equirrion usually keeps it's progeny,,,,,,,,,,,,,,,,,,,,,,,,,Airship,http://i.imgur.com/4GdhXW2.png,http://i.imgur.com/pDLyws9.png,,,,,,,,,,
+,,,,,,,,,,,,,,,,,"very closely related to dragons, more often",,,,,,,,,,,,,,,,,,,,,,,,,Artificer,https://i.imgur.com/tVDSt3v.png,http://i.imgur.com/pDLyws9.png,,,,,,,,,,
+,,,,,,,,,,,,,,,,,"then not, arranging marriages between ",,,,,,,,,,,,their sons and daughters with dragons.,,,,,,,,,,,,,Barbarian,https://i.imgur.com/gjtfTEm.png,http://i.imgur.com/pDLyws9.png,,,,,,,,,,
+,,,,,,,,,,,,,,,,,"More often then not, the marriages will",,,,,,,,,,,,be between a dragon and their rider.,,,,,,,,,,,,,Bard,https://i.imgur.com/5HYYXoz.png,http://i.imgur.com/pDLyws9.png,,,,,,,,,,
+,,,,,,,,,,,,,,,,,               ALLIES & ORGANIZATIONS,,,,,,,,,,,,,,,,,,,,,,,,,Cleric,https://i.imgur.com/hOgeNi7.png,http://i.imgur.com/pDLyws9.png,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Druid,https://i.imgur.com/5ZZQ7Jh.png,http://i.imgur.com/pDLyws9.png,,,,,,,,,,
+,,,,,,,,,,,,,,,,,Born to the current Marquess and Marchioness and heir to the March of Dragonsgrace,,,,,,,,,,,,,,,,,,,,,,,,,Fighter,https://i.imgur.com/UI4mejB.png,http://i.imgur.com/pDLyws9.png,,,,,,,,,,
+,,,,,,,,,,,,,,,,,"Mraess, or commonly referred to as Rae by fanily never really cared much for the courtly life.",,,,,,,,,,,,,,,,,,,,,,,,,Monk,https://i.imgur.com/lqUQ6YL.png,http://i.imgur.com/pDLyws9.png,,,,,,,,,,
+,,,,,,,,,,,,,,,,,Instead always slipping out after some accident to explore their mountainous city of Dragonsreach.,,,,,,,,,,,,,,,,,,,,,,,,,Paladin,https://i.imgur.com/uSFG6vd.png,http://i.imgur.com/pDLyws9.png,,,,,,,,,,
+,,,,,,,,,,,,,,,,,As a child Mraess has always shown an affinity for fire and it's more energetic counterpart;,,,,,,,,,,,,,,,,,,,,,,,,,Ranger,https://i.imgur.com/x6BHYTe.png,http://i.imgur.com/pDLyws9.png,,,,,,,,,,
+,,,,,,,,,,,,,,,,,"lightning. Born to a full blue mother and a half-gold father, Rae has always been an oddity in",,,,,,,,,,,,,,,,,,,,,,,,,Rogue,https://i.imgur.com/3llLqBB.png,http://i.imgur.com/pDLyws9.png,,,,,,,,,,
+,,,,,,,,,,,,,,,,,a court filled with half-dragons and dragons. Her vibrant blond almost golden hair constantly,,,,,,,,,,,,,,,,,,,,,,,,,Sorcerer,https://i.imgur.com/ssrZYbl.png,http://i.imgur.com/pDLyws9.png,,,,,,,,,,
+,,CHARACTER APPEARANCE,,,,,,,,,,,,,,,catching sunrays making it appear her hair was sometimes on fire. Completely opposite to her ,,,,,,,,,,,,,,,,,,,,,,,,,Warlock,https://i.imgur.com/QBhqRiG.png,http://i.imgur.com/pDLyws9.png,,,,,,,,,,
+,,,,,,,,,,,,,,,,,deep blue and ocean scales of her tail. ,,,,,,,,,,,,,,,,,,,,,,,,,Wizard,https://i.imgur.com/EOiSGxi.png,http://i.imgur.com/pDLyws9.png,,,,,,,,,,
+,,,,,,,,,,,,,,,,,"Despite her ranking, and her lack of decorum when alone, or with her ladies in waiting, Rae",,,,,,,,,,,,,,,,,,,,,,,,,Verbose,https://i.imgur.com/VyFvlcw.png,http://i.imgur.com/pDLyws9.png,,,,,,,,,,
+,,Dragon,,,,,,Blue,,,,,,,,,"could wrap courtiers around her fingers, a fact that her mother was always proud of.",,,,,,,,,,,,,,,,,,,,,,,,,Iconic,https://i.imgur.com/Nh6zWQZ.png,http://i.imgur.com/pDLyws9.png,,,,,,,,,,
+,,HEADER,,,,,,COLOR SCHEME,,,,,,,,,"Standing up for order and justice, she isn't saddistic as one would expect from someone related to",,,,,,,,,,,,,,,,,,,,,,,,,Blank,https://i.imgur.com/iDgWYL1.png,http://i.imgur.com/pDLyws9.png,,,,,,,,,,
+,,https://i.imgur.com/P43l2ie.png,,,,,,https://i.pinimg.com/originals/8d/7c/38/8d7c38b7197f3ba6a8138c52805844fd.jpg,,,,,,,,,"a chromatic, in fact, she can be rather sweet and charming when she wants to be.",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,APPEARANCE URL,,,,,,SYMBOL URL,,,,,,,,,"Along with her ranking, comes a love for fashion and always being up to date with the - see note",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,CUSTOMIZATION,,,,,,,,,,,,,,,CHARACTER BACKSTORY,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,v2.1 sheet by I F Evans based on v1.3 sheet by DM David Lester based on the official D&D character sheet available at Wizards.com/DnD.  (TM & © 2014 Wizards of the Coast LLC.),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
