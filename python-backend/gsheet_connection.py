@@ -57,11 +57,32 @@ def get_skill_details(csv_data):
     return (saving_throws, skills)
 
 def get_details(csv_data):
-    pass
+    character = {}
+    name_column = letter_to_index("C")
+    race_class_column = letter_to_index("T")
+    total_level_column = letter_to_index("AL")
+    hp_column = letter_to_index("R")
+    ac_column = letter_to_index("R")
+    init_column = letter_to_index("V")
+    speed_column = letter_to_index("Z")
+    
+    character_name = csv_data[5][name_column]
+    character_level = csv_data[5][total_level_column]
+    character_race = csv_data[6][race_class_column]
+    character_class_levels = csv_data[4][race_class_column]
+    character_hp = csv_data[16][hp_column]
+    character_ac = csv_data[11][ac_column]
+    character_init = csv_data[11][init_column]
+    character_speed = csv_data[11][speed_column]
+    
+    character[character_name] = {"Level": character_level, "Race": character_race, "classes/levels": character_class_levels, "HP": character_hp, 
+                                 "AC": character_ac, "Init": character_init, "Speed": character_speed}
+    return character
 
 def get_spells(csv_data):
     pass
 
 data = get_data()
-skill_detail_tuple = get_skill_details(data)
-print(skill_detail_tuple)
+print(get_details(data))
+# skill_detail_tuple = get_skill_details(data)
+# print(skill_detail_tuple)
