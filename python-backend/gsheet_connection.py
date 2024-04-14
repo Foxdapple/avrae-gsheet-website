@@ -82,7 +82,30 @@ def get_details(csv_data):
 def get_spells(csv_data):
     pass
 
+def get_ability_modifiers(csv_data):
+    column = letter_to_index("C")
+    row = 11 # row 12 on sheet
+    stats = {}
+    for i in range(0, 6):
+        stat_name = csv_data[row][column]
+        modifier_amount = csv_data[row+1][column]
+        stat_total = csv_data[row+3][column]
+        stats[stat_name] = {"Total": stat_total, "Modifier": modifier_amount}
+        row += 5
+    return stats
+
+def create_details(csv_data):
+    character = get_details(csv_data)
+    character_name = list(character.keys())[0] # gets the name of the character
+    stats = get_ability_modifiers(csv_data)
+    for stat_name, stat_details in stats.items():
+        character[character_name][stat_name] = stat_details
+    skills = get_skill_details(csv_data)
+    character[character_name]["Saving Throws"] = skills[0]
+    character[character_name]["Skills"] = skills[1]
+    print(character)
+
 data = get_data()
-print(get_details(data))
+create_details(data)
 # skill_detail_tuple = get_skill_details(data)
 # print(skill_detail_tuple)
