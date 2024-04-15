@@ -95,6 +95,62 @@ def get_ability_modifiers(csv_data):
         row += 5
     return stats
 
+def remove_empty_rows_from_list(list_given):
+    for i in range(len(list_given)-1,-1,-1):
+        if list_given[i] == "":
+            list_given.remove(list_given[i])
+    return list_given
+
+def get_spell_names(csv_data, level, starting_row):
+    first_column = letter_to_index("D")
+    second_column = letter_to_index("N")
+    third_column = letter_to_index("X")
+    fourth_column = letter_to_index("AH")
+    if level % 2 == 0:
+        first_column = fourth_column
+    temp_spells = []
+    if level in [1, 2, 3]:
+        rows = 5
+    elif level in [4, 5, 6]:
+        rows = 4
+    else:
+        rows = 3
+    for i in range(0, rows):
+        spell_one = csv_data[starting_row][first_column]
+        spell_two = csv_data[starting_row][second_column]
+        spell_three = csv_data[starting_row][third_column]
+        print(spell_one, spell_two, spell_three)
+        # print(first_column)
+        if level % 2 == 0:
+            temp_spells.append(spell_two)
+            temp_spells.append(spell_three)
+            temp_spells.append(spell_one)
+        else:
+            temp_spells.append(spell_one)
+            temp_spells.append(spell_two)
+            temp_spells.append(spell_three)
+        starting_row += 1
+    return (remove_empty_rows_from_list(temp_spells), starting_row)
+
+def get_spells(csv_data):
+    first_column = letter_to_index("D")
+    second_column = letter_to_index("N")
+    # third_column = letter_to_index("X")
+    # fourth_column = letter_to_index("AH")
+    casting_class = csv_data[90][first_column]
+    dc = csv_data[90][second_column]
+    casting_ability = csv_data[90][letter_to_index("AB")]
+    bonus = csv_data[90][letter_to_index("AI")]
+    spells = {}
+    spells["Details"] = {"Class": casting_class, "Save DC": dc, "Ability": casting_ability, "Attack Bonus": bonus, "Spells": {}}
+    starting_row = 95 # row 96 on sheet 
+    for spell_level in range(0, 10):
+        temp_spells, starting_row = get_spell_names(csv_data, spell_level, starting_row)
+        spells["Details"]["Spells"][str(spell_level)] = temp_spells
+        starting_row += 1
+    
+    return spells
+
 def create_details(csv_data):
     character = get_details(csv_data)
     character_name = list(character.keys())[0] # gets the name of the character
@@ -104,6 +160,8 @@ def create_details(csv_data):
     skills = get_skill_details(csv_data)
     character[character_name]["Saving Throws"] = skills[0]
     character[character_name]["Skills"] = skills[1]
+    spells = get_spells(csv_data)
+    character[character_name]["Casting"] = spells
     
     create_json(character, character_name)
     
@@ -114,6 +172,7 @@ def create_json(character, name):
         json.dump(character, outfile)
 
 data = get_data()
-create_details(data)
+get_spells(data)
+# create_details(data)
 # skill_detail_tuple = get_skill_details(data)
 # print(skill_detail_tuple)

@@ -126,6 +126,49 @@
                 "Prof": "Not Proficient",
                 "Mod": "+4"
             }
+        },
+        "Casting": {
+            "Details": {
+                "Class": "",
+                "Save DC": "",
+                "Ability": "16",
+                "Attack Bonus": "+8",
+                "Spells": {
+                    "0": [
+                        "Mind Sliver",
+                        "Voltaic Blade",
+                        "Twinkle",
+                        "Dark Tendril",
+                        "Charging Bolt",
+                        "Spare the Dying",
+                        "Lightning Lure",
+                        "Resistance"
+                    ],
+                    "1": [
+                        "Shield",
+                        "Bless",
+                        "Absorb Elements",
+                        "Shield of Faith",
+                        "Chromatic Orb",
+                        "Healing Word",
+                        "Command",
+                        "Fog Cloud"
+                    ],
+                    "2": [
+                        "Misty step",
+                        "Wither and Bloom",
+                        "Tasha's Mind Whip",
+                        "Dragon's Breath",
+                        "See Invisibility"
+                    ],
+                    "3": [
+                        "Lightning Bolt",
+                        "Counterspell",
+                        "Fear",
+                        "Fly"
+                    ]
+                }
+            }
         }
     }
 }
