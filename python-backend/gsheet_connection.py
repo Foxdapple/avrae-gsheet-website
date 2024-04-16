@@ -25,8 +25,8 @@ def get_csv_names():
     entires = os.listdir("csv/")
     return entires
 
-def get_data():
-    csv_file = "csv/" + get_csv_names()[0]
+def get_data(csv_name):
+    csv_file = "csv/" + csv_name
     csv_data = []
     with open(csv_file, mode ='r') as file:
         csvFile = csv.reader(file)
@@ -180,9 +180,22 @@ def create_json(character, name):
     with open(name + ".json", "w") as outfile:
         json.dump(character, outfile)
 
-data = get_data()
+'''
+If you want to only use a certain csv, just change it from a for loop to:
+    get_data(csv_name[x]) where x is the csv's in avalaible csv's
+'''
+
+def main():
+    avaliable_csvs = get_csv_names()
+    for csv_name in avaliable_csvs:
+        create_details(get_data(csv_name))
+    # data = get_data()
+    # create_details(data)
+
+main()
+# data = get_data()
 # get_description(data)
 # get_spells(data)
-create_details(data)
+# create_details(data)
 # skill_detail_tuple = get_skill_details(data)
 # print(skill_detail_tuple)
