@@ -7,29 +7,31 @@
         "AC": "17",
         "Init": "+4",
         "Speed": "30 ft",
-        "STR": {
-            "Total": "12",
-            "Modifier": "+1"
-        },
-        "DEX": {
-            "Total": "18",
-            "Modifier": "+4"
-        },
-        "CON": {
-            "Total": "14",
-            "Modifier": "+2"
-        },
-        "INT": {
-            "Total": "7",
-            "Modifier": "-2"
-        },
-        "WIS": {
-            "Total": "13",
-            "Modifier": "+1"
-        },
-        "CHA": {
-            "Total": "20",
-            "Modifier": "+5"
+        "Stats": {
+            "STR": {
+                "Total": "12",
+                "Modifier": "+1"
+            },
+            "DEX": {
+                "Total": "18",
+                "Modifier": "+4"
+            },
+            "CON": {
+                "Total": "14",
+                "Modifier": "+2"
+            },
+            "INT": {
+                "Total": "7",
+                "Modifier": "-2"
+            },
+            "WIS": {
+                "Total": "13",
+                "Modifier": "+1"
+            },
+            "CHA": {
+                "Total": "20",
+                "Modifier": "+5"
+            }
         },
         "Saving Throws": {
             "Strength": {
@@ -130,7 +132,7 @@
         "Casting": {
             "Details": {
                 "Class": "",
-                "Save DC": "",
+                "Save DC": "Charisma",
                 "Ability": "16",
                 "Attack Bonus": "+8",
                 "Spells": {
@@ -152,7 +154,8 @@
                         "Chromatic Orb",
                         "Healing Word",
                         "Command",
-                        "Fog Cloud"
+                        "Fog Cloud",
+                        "Thunderwave"
                     ],
                     "2": [
                         "Misty step",
@@ -166,9 +169,25 @@
                         "Counterspell",
                         "Fear",
                         "Fly"
-                    ]
+                    ],
+                    "4": [],
+                    "5": [],
+                    "6": [],
+                    "7": [],
+                    "8": [],
+                    "9": []
                 }
             }
+        },
+        "Description": {
+            "AGE": "28",
+            "GENDER": "Female",
+            "HEIGHT": "6'3",
+            "EYES": "Amber",
+            "WEIGHT": "146 lb.",
+            "HAIR": "Golden",
+            "SIZE": "Medium",
+            "SKIN": "Fair"
         }
     }
 }

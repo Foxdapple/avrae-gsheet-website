@@ -80,8 +80,16 @@ def get_details(csv_data):
                                  "AC": character_ac, "Init": character_init, "Speed": character_speed}
     return character
 
-def get_spells(csv_data):
-    pass
+def get_description(csv_data):
+    starting_column = letter_to_index("C")
+    row_one = 147 # row 148 on sheet
+    row_two = 149 # row 150 on sheet
+    json_info = {}
+    for i in range(0, 4):
+        json_info[csv_data[row_one+1][starting_column]] = csv_data[row_one][starting_column]
+        json_info[csv_data[row_two+1][starting_column]] = csv_data[row_two][starting_column]
+        starting_column += 3
+    return json_info
 
 def get_ability_modifiers(csv_data):
     column = letter_to_index("C")
@@ -134,7 +142,7 @@ def get_spell_names(csv_data, level, starting_row):
 
 def get_spells(csv_data):
     first_column = letter_to_index("D")
-    second_column = letter_to_index("N")
+    second_column = letter_to_index("U")
     # third_column = letter_to_index("X")
     # fourth_column = letter_to_index("AH")
     casting_class = csv_data[90][first_column]
@@ -148,6 +156,7 @@ def get_spells(csv_data):
         temp_spells, starting_row = get_spell_names(csv_data, spell_level, starting_row)
         spells["Details"]["Spells"][str(spell_level)] = temp_spells
         starting_row += 1
+
     
     return spells
 
@@ -155,24 +164,25 @@ def create_details(csv_data):
     character = get_details(csv_data)
     character_name = list(character.keys())[0] # gets the name of the character
     stats = get_ability_modifiers(csv_data)
+    character[character_name]["Stats"] = {}
     for stat_name, stat_details in stats.items():
-        character[character_name][stat_name] = stat_details
+        character[character_name]["Stats"][stat_name] = stat_details
     skills = get_skill_details(csv_data)
     character[character_name]["Saving Throws"] = skills[0]
     character[character_name]["Skills"] = skills[1]
-    spells = get_spells(csv_data)
-    character[character_name]["Casting"] = spells
+    character[character_name]["Casting"] = get_spells(csv_data)
+    character[character_name]["Description"] = get_description(csv_data)
     
     create_json(character, character_name)
     
 def create_json(character, name):
     print(character)
-    
     with open(name + ".json", "w") as outfile:
         json.dump(character, outfile)
 
 data = get_data()
-get_spells(data)
-# create_details(data)
+# get_description(data)
+# get_spells(data)
+create_details(data)
 # skill_detail_tuple = get_skill_details(data)
 # print(skill_detail_tuple)
