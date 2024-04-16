@@ -2,6 +2,7 @@ import os
 import csv
 import string
 import json
+from pathlib import Path
 
 '''
 Columns are letters
@@ -186,14 +187,26 @@ If you want to only use a certain csv, just change it from a for loop to:
     get_data(csv_name[x]) where x is the csv's in avalaible csv's
 '''
 
+def generate_json_names():
+    jsons_avaliable = os.listdir()
+    name_of_jsons = {}
+    name_of_jsons["Names"] = []
+    for json_name in jsons_avaliable:
+        if json_name[-4:] == "json":
+            name_of_jsons["Names"].append(json_name)
+    with open("list_of_jsons" + ".json", "w") as outfile:
+        json.dump(name_of_jsons, outfile)
+
 def main():
     avaliable_csvs = get_csv_names()
     for csv_name in avaliable_csvs:
         create_details(get_data(csv_name))
+    generate_json_names()
     # data = get_data()
     # create_details(data)
 
 main()
+# generate_json_names()
 # data = get_data()
 # get_description(data)
 # get_spells(data)
