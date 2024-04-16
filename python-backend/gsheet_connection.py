@@ -89,6 +89,7 @@ def get_description(csv_data):
         json_info[csv_data[row_one+1][starting_column]] = csv_data[row_one][starting_column]
         json_info[csv_data[row_two+1][starting_column]] = csv_data[row_two][starting_column]
         starting_column += 3
+    json_info["IMAGE"] = csv_data[175][letter_to_index("C")]
     return json_info
 
 def get_ability_modifiers(csv_data):
