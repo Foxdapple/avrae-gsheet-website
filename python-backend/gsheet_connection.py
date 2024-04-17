@@ -129,7 +129,7 @@ def get_spell_names(csv_data, level, starting_row):
         spell_one = csv_data[starting_row][first_column]
         spell_two = csv_data[starting_row][second_column]
         spell_three = csv_data[starting_row][third_column]
-        print(spell_one, spell_two, spell_three)
+        # print(spell_one, spell_two, spell_three)
         # print(first_column)
         if level % 2 == 0:
             temp_spells.append(spell_two)
@@ -178,7 +178,7 @@ def create_details(csv_data):
     create_json(character, character_name)
     
 def create_json(character, name):
-    print(character)
+    # print(character)
     with open(name + ".json", "w") as outfile:
         json.dump(character, outfile)
 

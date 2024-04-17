@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="css/styles.css"
+<link rel="stylesheet" href="css/styles.css">
 <style>
 html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 </style>
@@ -33,42 +33,54 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
             <div class="w3-container">
                 <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Character Information</b></p>
                 <input type="file" id="upload" onchange="getFile(this)" single>
-                <p style="text-align: center;">Strength</p>
-                    <div class="w3-light-grey w3-round-xlarge w3-small">
-                    <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:0%" id="str-stat">0</div>
-                </div>
+                
+                <div class="w3-light-grey w3-round-xlarge">
+                    <p style="text-align: center; font-family: Roboto, sans-serif !important;">Strength</p>
+                    <div class="w3-grey w3-round-xlarge w3-small">
+                        <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:0%" id="str-stat">0</div>
+                    </div>
                 <p style="text-align: center;">Modifier: 0</p>
+                </div>
 
-                <p style="text-align: center;">Dexterity</p>
-                    <div class="w3-light-grey w3-round-xlarge w3-small">
-                    <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:0%" id="dex-stat">0</div>
-                </div>
+                <div class="w3-light-grey w3-round-xlarge">
+                    <p style="text-align: center; font-family: Roboto, sans-serif !important;">Dexterity</p>
+                    <div class="w3-grey w3-round-xlarge w3-small">
+                        <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:0%" id="dex-stat">0</div>
+                    </div>
                 <p style="text-align: center;">Modifier: 0</p>
+                </div>
 
-                <p style="text-align: center;">Constitution</p>
-                    <div class="w3-light-grey w3-round-xlarge w3-small">
-                    <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:0%" id="con-stat">0</div>
-                </div>
+                <div class="w3-light-grey w3-round-xlarge">
+                    <p style="text-align: center; font-family: Roboto, sans-serif !important;">Constitution</p>
+                    <div class="w3-grey w3-round-xlarge w3-small">
+                        <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:0%" id="con-stat">0</div>
+                    </div>
                 <p style="text-align: center;">Modifier: 0</p>
+                </div>
 
-                <p style="text-align: center;">Intelligence</p>
-                    <div class="w3-light-grey w3-round-xlarge w3-small">
-                    <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:0%" id="int-stat">0</div>
-                </div>
+                <div class="w3-light-grey w3-round-xlarge">
+                    <p style="text-align: center; font-family: Roboto, sans-serif !important;">Intelligence</p>
+                    <div class="w3-grey w3-round-xlarge w3-small">
+                        <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:0%" id="int-stat">0</div>
+                    </div>
                 <p style="text-align: center;">Modifier: 0</p>
+                </div>
 
-                <p style="text-align: center;">Wisdom</p>
-                    <div class="w3-light-grey w3-round-xlarge w3-small">
-                    <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:0%" id="wis-stat">0</div>
-                </div>
+                <div class="w3-light-grey w3-round-xlarge">
+                    <p style="text-align: center; font-family: Roboto, sans-serif !important;">Wisdom</p>
+                    <div class="w3-grey w3-round-xlarge w3-small">
+                        <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:0%" id="wis-stat">0</div>
+                    </div>
                 <p style="text-align: center;">Modifier: 0</p>
+                </div>
 
-                <p style="text-align: center;">Charisma</p>
-                    <div class="w3-light-grey w3-round-xlarge w3-small">
-                    <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:0%" id="cha-stat">0</div>
+                <div class="w3-light-grey w3-round-xlarge">
+                    <p style="text-align: center; font-family: Roboto, sans-serif !important;">Charisma</p>
+                    <div class="w3-grey w3-round-xlarge w3-small">
+                        <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:0%" id="cha-stat">0</div>
+                    </div>
+                    <p style="text-align: center;">Modifier: 0</p>
                 </div>
-                <p style="text-align: center;">Modifier: 0</p>
-                <div class="curved-modifier-line">
             <hr>
 
             <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Saving throws</b></p>
@@ -144,42 +156,53 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
                 <p>Web Development! All I need to know in one place</p>
                 <hr>
             </div>
+
             <div class="w3-container">
                 <h5 class="w3-opacity"><b>1st Level</b></h5>
                 <p>Master Degree</p>
-            <hr>
+                <hr>
             </div>
-                <div class="w3-container">
+
+            <div class="w3-container">
                 <h5 class="w3-opacity"><b>2nd Level</b></h5>
-                <p>Bachelor Degree</p><br>
+                <p>Bachelor Degree</p>
+                <hr>
             </div>
+
             <div class="w3-container">
                 <h5 class="w3-opacity"><b>3rd Level</b></h5>
-                <p>Bachelor Degree</p><br>
+                <p>Bachelor Degree</p>
+                <hr>
             </div>
+
             <div class="w3-container">
                 <h5 class="w3-opacity"><b>4th Level</b></h5>
-                <p>Bachelor Degree</p><br>
+                <p>Bachelor Degree</p>
+                <hr>
             </div>
+
             <div class="w3-container">
                 <h5 class="w3-opacity"><b>6th Level</b></h5>
-                <p>Bachelor Degree</p><br>
+                <p>Bachelor Degree</p>
+                <hr>
             </div>
+
             <div class="w3-container">
                 <h5 class="w3-opacity"><b>7th Level</b></h5>
-                <p>Bachelor Degree</p><br>
+                <p>Bachelor Degree</p>
+                <hr>
             </div>
+
             <div class="w3-container">
                 <h5 class="w3-opacity"><b>8th Level</b></h5>
-                <p>Bachelor Degree</p><br>
+                <p>Bachelor Degree</p>
+                <hr>
             </div>
+
             <div class="w3-container">
                 <h5 class="w3-opacity"><b>9th Level</b></h5>
-                <p>Bachelor Degree</p><br>
-            </div>
-            <div class="w3-container">
-                <h5 class="w3-opacity"><b>3rd Level</b></h5>
-                <p>Bachelor Degree</p><br>
+                <p>Bachelor Degree</p>
+                <br>
             </div>
         </div>
 

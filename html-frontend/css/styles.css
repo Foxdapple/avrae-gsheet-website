@@ -1,0 +1,8 @@
+.curved-modifier-line{
+    height: 150px;
+        border-style: solid;
+        border-color: black;
+        border-width: 1px 0 0 0;
+        border-radius: 130px;
+	border-top: 1px solid #8c8c8c;
+}
