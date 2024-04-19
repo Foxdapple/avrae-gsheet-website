@@ -6,3 +6,21 @@
         border-radius: 130px;
 	border-top: 1px solid #8c8c8c;
 }
+
+@media screen and (max-width: 599px){
+    .skills-container{
+        width: inherit;
+    }
+}
+
+@media screen and (min-width: 600px){
+    .skills-container{
+        width: 100%;
+    }
+    .container-width{
+        /* background-color: yellow !important; */
+        width: 33.3%;
+        float: left;
+    }
+}
+
