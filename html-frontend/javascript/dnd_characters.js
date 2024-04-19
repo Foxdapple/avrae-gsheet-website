@@ -65,11 +65,12 @@ function get_numbers_for_saving_throws(json_input, character_name){
 function get_highest_score(saving_throws){
   let biggest_throw = 0;
   for (let i = 0; i < saving_throws.length; i++){
-    if (saving_throws[i]["Mod"] > biggest_throw){
-      biggest_throw = saving_throws[i]["Mod"];
+    if (saving_throws[i]["Mod"] > 0) {
+      if (saving_throws[i]["Mod"] > biggest_throw){
+        biggest_throw = saving_throws[i]["Mod"];
+      }
     }
   }
-  // console.log(biggest_throw)
   return parseInt(biggest_throw);
 }
 
@@ -113,9 +114,17 @@ function get_skill_information_from_json(json_input, character_name){
   return list_of_keys;
 }
 
+function set_default_skill_body(skills_body){
+  skills_body.innerHTML = 
+  "<h2 class='w3-text-grey w3-padding-16'>" +
+    "<i class='fa fa-star fa-fw w3-margin-right w3-xxlarge w3-text-teal'></i>Skills" +
+  "</h2>"
+}
+
 function set_skills(json_input, character_name){
   const skills_body = document.getElementById("skills-body");
-  const skills_json_location = json_input[character_name]["Skills"]
+  set_default_skill_body(skills_body);
+  const skills_json_location = json_input[character_name]["Skills"];
   const name_of_skills_list = get_skill_information_from_json(json_input, character_name);
   let skills_json_list = []
   for (key in name_of_skills_list){ // used to just put all of the json's in a list for later use
@@ -127,10 +136,8 @@ function set_skills(json_input, character_name){
   for (key in name_of_skills_list){
     let skill_name = name_of_skills_list[key];
     let skill = skills_json_location[skill_name]
-    // console.log(highest_skill, parseInt(skill["Mod"].slice(1)), (parseInt(skill["Mod"].slice(1))/highest_skill) * 100)
     let width = (parseInt(skill["Mod"].slice(1))/highest_skill) * 100;
-    console.log(width)
-    if (skill["Mod"].slice(1) == 0){
+    if (skill["Mod"].slice(1) == 0 || skill["Mod"] < 0){
       skills_body.innerHTML += 
       "<div class='w3-container container-width'>" +
         "<div class='w3-light-grey w3-round-xlarge skills-container'>" +
@@ -161,6 +168,126 @@ function set_skills(json_input, character_name){
   "</div>";
 }
 
+function get_spell_specific_info_from_web(lower_spell_name, spell_name, spell_level){
+  const fetchPromise = fetch(`https://www.dnd5eapi.co/api/spells/${lower_spell_name}`);
+  const streamPromise = fetchPromise.then( (response) => response.json() )
+  streamPromise.then( (data) => display_spell(spell_name, lower_spell_name, data["desc"], spell_level, data));
+}
+
+function get_spells(json_input, character_name){
+  const spells_json_location = json_input[character_name]["Casting"]["Details"]["Spells"];
+  for (spell_level in spells_json_location){
+    let spell_array = spells_json_location["" + spell_level];
+    for (spell in spell_array){
+      let lower_spell_name = "";
+      let spell_name = "";
+      for (i in spell_array[spell]){
+        let letter = spell_array[spell][i]
+        if (letter == " "){
+          lower_spell_name += "-";
+        }
+        else{
+          lower_spell_name += letter;
+        }
+        spell_name += letter;
+        
+      }
+      get_spell_specific_info_from_web(lower_spell_name.toLowerCase(), spell_name, spell_level);
+    }
+    
+  }
+}
+
+function get_spell_colour(damage_type){
+  let colour = "";
+  let text_colour = "";
+    switch(damage_type){
+      case "Fire":
+        colour = "red";
+        text_colour = "white";
+        break;
+      case "Acid":
+        colour = "light-green";
+        text_colour = "black";
+        break;
+      case "Cold":
+        colour = "pale-blue";
+        text_colour = "black";
+        break;
+      case "Force":
+        colour = "blue-grey";
+        text_colour = "white";
+        break;
+      case "Lightning":
+        colour = "indigo";
+        text_colour = "white";
+        break;
+      case "Poison":
+        colour = "green";
+        text_colour = "white";
+        break;
+      case "Psychic":
+        colour = "pink";
+        text_colour = "white";
+        break;
+      case "Necrotic":
+        colour = "dark-grey";
+        text_colour = "white";
+        break;
+      case "Radiant":
+        colour = "pale-yellow";
+        text_colour = "black";
+        break;
+      case "Thunder":
+        colour = "deep-purple";
+        text_colour = "white";
+        break;
+      case "No damage Type":
+        colour = "grey";
+        text_colour = "white";
+        break;
+    }
+  return colour
+}
+
+function display_spell(spell_name, search_spell_name, spell_info, spell_level, data) {
+  let damage_type = "";
+  try {
+    damage_type = data["damage"]["damage_type"]["name"];
+  }
+  catch(err){
+    damage_type = "No damage Type";
+  }
+  finally {
+    const colour = get_spell_colour(damage_type);
+    console.log(colour);
+    const website_spell_spot = document.getElementById(spell_level+"-level-spells");
+    if (spell_info != null){
+      spell_info = spell_info;
+    }else{
+      spell_info = [`No Info Avaliable, look at it here instead: <a href="http://dnd5e.wikidot.com/spell:${search_spell_name}">http://dnd5e.wikidot.com/spell:${search_spell_name}</a>`]
+    }
+    let spell_details = "";
+    for (i in spell_info){
+      spell_details += spell_info[i] + "\n";
+    }
+    website_spell_spot.innerHTML +=
+    "<div class='w3-container container-width'>" +
+      "<div class='w3-light-grey w3-round-xlarge spell-container'>" +
+          `<p style='text-align: center; font-family: Roboto, sans-serif !important;'>${spell_name}</p>` +
+          "<div class='w3-grey w3-round-xlarge w3-small'>" +
+              `<div class='w3-container w3-center w3-round-xlarge w3-${colour} spell-description'>${spell_details}</div>` +
+          "</div>" +
+          "<div class='w3-grey w3-round-xlarge w3-small'>" +
+              `<div class='w3-container w3-center w3-round-xlarge w3-grey' style='width: 100%;'>Components: </div>` +
+              `<div class='w3-container w3-center w3-round-xlarge w3-grey' style='width: 100%;'>Casting Time: </div>` +
+          "</div>" +
+      `<p style='text-align: center;'>Damage Type: ${damage_type}</p>` +
+      "</div>" +
+    "</div>"
+  }
+}
+
 const get_info_from_json = (json_input) => {
     const image = document.getElementById("character-image");
     const name_text = document.getElementById("character-name");
@@ -170,4 +297,6 @@ const get_info_from_json = (json_input) => {
     set_main_stats(json_input, character_name);
     set_saving_throws(json_input, character_name);
     set_skills(json_input, character_name);
+    get_spells(json_input, character_name);
+    
 }
