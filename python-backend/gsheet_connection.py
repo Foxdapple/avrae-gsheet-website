@@ -58,6 +58,24 @@ def get_skill_details(csv_data):
         
     return [saving_throws, skills]
 
+def convert_to_list(class_levels):
+    temp_string = ""
+    temp_list = []
+    class_list = []
+    for i in class_levels:
+        if i == " ":
+            if len(temp_string) > 1:
+                temp_list.append(temp_string)
+                temp_string = ""
+        elif i.isdigit():
+            temp_list.append(i)
+            temp_string = ""
+            class_list.append(temp_list)
+            temp_list = []
+        else:
+            temp_string += i
+    return class_list
+
 def get_details(csv_data, languages):
     character = {}
     name_column = letter_to_index("C")
@@ -72,6 +90,7 @@ def get_details(csv_data, languages):
     character_level = csv_data[5][total_level_column]
     character_race = csv_data[6][race_class_column]
     character_class_levels = csv_data[4][race_class_column]
+    character_class_levels = convert_to_list(character_class_levels)
     character_hp = csv_data[16][hp_column]
     character_ac = csv_data[11][ac_column]
     character_init = csv_data[11][init_column]

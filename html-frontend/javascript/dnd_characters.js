@@ -286,7 +286,7 @@ function get_languages(json_input, character_name){
   languages.forEach((language) => display_language(language));
 }
 
-function get_character_details(json_input, character_name){
+function get_character_description(json_input, character_name){
   const json_details = json_input[character_name]["Description"];
   document.getElementById("character-details").innerHTML = 
   `<li>Age: ${json_details["AGE"]}</li>` +
@@ -299,9 +299,21 @@ function get_character_details(json_input, character_name){
   `<li>Size: ${json_details["SIZE"]}</li>`
 }
 
+function get_character_details(json_input, character_name){
+  const json_details = json_input[character_name];
+  document.getElementById("character-level").innerHTML = json_details["Level"];
+  document.getElementById("character-classes").innerHTML = json_details["classes/levels"];
+  document.getElementById("character-hp").innerHTML = json_details["HP"];
+  document.getElementById("character-ac").innerHTML = json_details["AC"];
+  document.getElementById("character-init").innerHTML = json_details["Init"];
+  document.getElementById("character-speed").innerHTML = json_details["Speed"];
+}
+
 const get_info_from_json = (json_input) => {
   document.getElementById("character-details").innerHTML = "";
   document.getElementById("character-languages").innerHTML = "";
+  document.getElementById("character-classes").innerHTML = "";
+  get_character_details(json_input, character_name);
   const image = document.getElementById("character-image");
   const name_text = document.getElementById("character-name");
   const character_name = get_character_name_from_json(json_input);
@@ -312,5 +324,6 @@ const get_info_from_json = (json_input) => {
   set_skills(json_input, character_name);
   get_spells(json_input, character_name);
   get_languages(json_input, character_name);
-  get_character_details(json_input, character_name);
+  get_character_description(json_input, character_name);
+
 }
