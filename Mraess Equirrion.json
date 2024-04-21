@@ -7,6 +7,12 @@
         "AC": "17",
         "Init": "+4",
         "Speed": "30 ft",
+        "Languages": [
+            "Common",
+            "Draconic",
+            "Sylvan",
+            "Thieves' Cant"
+        ],
         "Stats": {
             "STR": {
                 "Total": "12",

@@ -58,7 +58,7 @@ def get_skill_details(csv_data):
         
     return [saving_throws, skills]
 
-def get_details(csv_data):
+def get_details(csv_data, languages):
     character = {}
     name_column = letter_to_index("C")
     race_class_column = letter_to_index("T")
@@ -78,7 +78,7 @@ def get_details(csv_data):
     character_speed = csv_data[11][speed_column]
     
     character[character_name] = {"Level": character_level, "Race": character_race, "classes/levels": character_class_levels, "HP": character_hp, 
-                                 "AC": character_ac, "Init": character_init, "Speed": character_speed}
+                                 "AC": character_ac, "Init": character_init, "Speed": character_speed, "Languages": languages}
     return character
 
 def get_description(csv_data):
@@ -162,8 +162,20 @@ def get_spells(csv_data):
     
     return spells
 
+def get_languages(csv_data):
+    column = letter_to_index("R")
+    row = 44 # row 45 on sheet
+    language_list = []
+    language = csv_data[row][column]
+    while language != "":
+        language_list.append(language)
+        row += 1
+        language = csv_data[row][column]
+    return language_list
+
 def create_details(csv_data):
-    character = get_details(csv_data)
+    languages = get_languages(csv_data)
+    character = get_details(csv_data, languages)
     character_name = list(character.keys())[0] # gets the name of the character
     stats = get_ability_modifiers(csv_data)
     character[character_name]["Stats"] = {}
@@ -178,7 +190,7 @@ def create_details(csv_data):
     create_json(character, character_name)
     
 def create_json(character, name):
-    # print(character)
+    print(character)
     with open(name + ".json", "w") as outfile:
         json.dump(character, outfile)
 
@@ -190,8 +202,10 @@ def main():
     # create_details(data)
 
 main()
+
 # generate_json_names()
-# data = get_data()
+# data = get_data("Mraess of house Equirrion - v2.1.csv")
+# get_languages(data)
 # get_description(data)
 # get_spells(data)
 # create_details(data)

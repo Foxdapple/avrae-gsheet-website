@@ -200,51 +200,39 @@ function get_spells(json_input, character_name){
 
 function get_spell_colour(damage_type){
   let colour = "";
-  let text_colour = "";
     switch(damage_type){
       case "Fire":
         colour = "red";
-        text_colour = "white";
         break;
       case "Acid":
         colour = "light-green";
-        text_colour = "black";
         break;
       case "Cold":
         colour = "pale-blue";
-        text_colour = "black";
         break;
       case "Force":
         colour = "blue-grey";
-        text_colour = "white";
         break;
       case "Lightning":
         colour = "indigo";
-        text_colour = "white";
         break;
       case "Poison":
         colour = "green";
-        text_colour = "white";
         break;
       case "Psychic":
         colour = "pink";
-        text_colour = "white";
         break;
       case "Necrotic":
         colour = "dark-grey";
-        text_colour = "white";
         break;
       case "Radiant":
         colour = "pale-yellow";
-        text_colour = "black";
         break;
       case "Thunder":
         colour = "deep-purple";
-        text_colour = "white";
         break;
       case "No damage Type":
         colour = "grey";
-        text_colour = "white";
         break;
     }
   return colour
@@ -260,12 +248,11 @@ function display_spell(spell_name, search_spell_name, spell_info, spell_level, d
   }
   finally {
     const colour = get_spell_colour(damage_type);
-    console.log(colour);
     const website_spell_spot = document.getElementById(spell_level+"-level-spells");
     if (spell_info != null){
       spell_info = spell_info;
     }else{
-      spell_info = [`No Info Avaliable, look at it here instead: <a href="http://dnd5e.wikidot.com/spell:${search_spell_name}">http://dnd5e.wikidot.com/spell:${search_spell_name}</a>`]
+      spell_info = [`No Info Avaliable, look at it here instead: <a href="http://dnd5e.wikidot.com/spell:${search_spell_name}" target="_blank">http://dnd5e.wikidot.com/spell:${search_spell_name}</a>`]
     }
     let spell_details = "";
     for (i in spell_info){
@@ -288,15 +275,42 @@ function display_spell(spell_name, search_spell_name, spell_info, spell_level, d
   }
 }
 
+const display_language = (language) => {
+  const language_section = document.getElementById("character-languages");
+  language_section.innerHTML += `<li>${language}</li>`;
+}
+
+
+function get_languages(json_input, character_name){
+  const languages = json_input[character_name]["Languages"]
+  languages.forEach((language) => display_language(language));
+}
+
+function get_character_details(json_input, character_name){
+  const json_details = json_input[character_name]["Description"];
+  document.getElementById("character-details").innerHTML = 
+  `<li>Age: ${json_details["AGE"]}</li>` +
+  `<li>Gender: ${json_details["GENDER"]}</li>` +
+  `<li>Height: ${json_details["HEIGHT"]}</li>` +
+  `<li>Weight: ${json_details["WEIGHT"]}</li>` +
+  `<li>Hair: ${json_details["HAIR"]}</li>` +
+  `<li>Eyes: ${json_details["EYES"]}</li>` +
+  `<li>Skin: ${json_details["SKIN"]}</li>` +
+  `<li>Size: ${json_details["SIZE"]}</li>`
+}
+
 const get_info_from_json = (json_input) => {
-    const image = document.getElementById("character-image");
-    const name_text = document.getElementById("character-name");
-    const character_name = get_character_name_from_json(json_input);
-    image.src = json_input[character_name]["Description"]["IMAGE"];
-    name_text.innerText = character_name;
-    set_main_stats(json_input, character_name);
-    set_saving_throws(json_input, character_name);
-    set_skills(json_input, character_name);
-    get_spells(json_input, character_name);
-    
+  document.getElementById("character-details").innerHTML = "";
+  document.getElementById("character-languages").innerHTML = "";
+  const image = document.getElementById("character-image");
+  const name_text = document.getElementById("character-name");
+  const character_name = get_character_name_from_json(json_input);
+  image.src = json_input[character_name]["Description"]["IMAGE"];
+  name_text.innerText = character_name;
+  set_main_stats(json_input, character_name);
+  set_saving_throws(json_input, character_name);
+  set_skills(json_input, character_name);
+  get_spells(json_input, character_name);
+  get_languages(json_input, character_name);
+  get_character_details(json_input, character_name);
 }

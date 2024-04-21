@@ -33,7 +33,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
             <!-- Start of Ability scores section (Top left panel) -->
             <div class="w3-container">
-                <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Character Information</b></p>
+                <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i><a id="sheet-link">Character Information</a></b></p>
                 <input type="file" id="upload" onchange="getFile(this)" single>
                 
                 <div class="w3-light-grey w3-round-xlarge">
@@ -137,23 +137,27 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
             <p style="text-align: center;" id="cha-saving-prof">---</p>
             </div>
 
-            <br>
+            <hr>
             <!-- End of Saving Throws section (Top left panel) -->
 
+            <p class="w3-large w3-text-theme"><b><i class="fa fa-book fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
+            <ul id="character-languages">
+                <li>???</li>
+                <li>???</li>
+            </ul>
+            <hr>
 
-            <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Description</b></p>
-            <p>English</p>
-            <div class="w3-light-grey w3-round-xlarge">
-                <div class="w3-round-xlarge w3-teal" style="height:24px;width:100%"></div>
-            </div>
-            <p>Spanish</p>
-            <div class="w3-light-grey w3-round-xlarge">
-                <div class="w3-round-xlarge w3-teal" style="height:24px;width:55%"></div>
-            </div>
-            <p>German</p>
-            <div class="w3-light-grey w3-round-xlarge">
-                <div class="w3-round-xlarge w3-teal" style="height:24px;width:25%"></div>
-            </div>
+            <p class="w3-large w3-text-theme"><b><i class="fa fa-bookmark fa-fw w3-margin-right w3-text-teal"></i>Description</b></p>
+            <ul id="character-details">
+                <li>Age: ???</li>
+                <li>Gender: ???</li>
+                <li>Height: ???</li>
+                <li>Weight: ???</li>
+                <li>Hair: ???</li>
+                <li>Eyes: ???</li>
+                <li>Skin: ???</li>
+                <li>Size: ???</li>
+            </ul>
             <br>
             </div>
         </div><br>
