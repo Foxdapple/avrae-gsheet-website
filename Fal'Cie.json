@@ -2,7 +2,19 @@
     "Fal'Cie": {
         "Level": "7",
         "Race": "Wood Elf",
-        "classes/levels": "Wildfire Druid 6 Draconic Bloodline Sorcerer 1",
+        "classes/levels": [
+            [
+                "Wildfire",
+                "Druid",
+                "6"
+            ],
+            [
+                "Draconic",
+                "Bloodline",
+                "Sorcerer",
+                "1"
+            ]
+        ],
         "HP": "66",
         "AC": "18",
         "Init": "+5",

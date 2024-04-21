@@ -299,26 +299,38 @@ function get_character_description(json_input, character_name){
   `<li>Size: ${json_details["SIZE"]}</li>`
 }
 
+const get_classes_and_levels = (class_list) => {
+  console.log(class_list);
+  const main_class = class_list[class_list.length-2];
+  const link = "http://dnd5e.wikidot.com/" + main_class
+  let class_string = "";
+  class_list.forEach((item) => (class_string+=item + " "))
+  document.getElementById("character-classes").innerHTML += 
+    `<li><a href="${link}">${class_string}</a></li>`;
+  
+}
+
 function get_character_details(json_input, character_name){
   const json_details = json_input[character_name];
-  document.getElementById("character-level").innerHTML = json_details["Level"];
-  document.getElementById("character-classes").innerHTML = json_details["classes/levels"];
-  document.getElementById("character-hp").innerHTML = json_details["HP"];
-  document.getElementById("character-ac").innerHTML = json_details["AC"];
-  document.getElementById("character-init").innerHTML = json_details["Init"];
-  document.getElementById("character-speed").innerHTML = json_details["Speed"];
+  document.getElementById("character-level").innerText = "Level: " + json_details["Level"];
+  const classes = json_details["classes/levels"];
+  classes.forEach((classes) => get_classes_and_levels(classes))
+  document.getElementById("character-hp").innerText = "HP: " + json_details["HP"];
+  document.getElementById("character-ac").innerText = "AC: " + json_details["AC"];
+  document.getElementById("character-init").innerText = "Init: " + json_details["Init"];
+  document.getElementById("character-speed").innerText = "Speed: " + json_details["Speed"];
 }
 
 const get_info_from_json = (json_input) => {
   document.getElementById("character-details").innerHTML = "";
   document.getElementById("character-languages").innerHTML = "";
   document.getElementById("character-classes").innerHTML = "";
-  get_character_details(json_input, character_name);
   const image = document.getElementById("character-image");
   const name_text = document.getElementById("character-name");
   const character_name = get_character_name_from_json(json_input);
   image.src = json_input[character_name]["Description"]["IMAGE"];
   name_text.innerText = character_name;
+  get_character_details(json_input, character_name);
   set_main_stats(json_input, character_name);
   set_saving_throws(json_input, character_name);
   set_skills(json_input, character_name);

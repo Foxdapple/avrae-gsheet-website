@@ -2,7 +2,18 @@
     "Mraess Equirrion": {
         "Level": "8",
         "Race": "Gold Dragonborn",
-        "classes/levels": "Draconic Sorcerer 6 Tempest Cleric 2",
+        "classes/levels": [
+            [
+                "Draconic",
+                "Sorcerer",
+                "6"
+            ],
+            [
+                "Tempest",
+                "Cleric",
+                "2"
+            ]
+        ],
         "HP": "60",
         "AC": "17",
         "Init": "+4",

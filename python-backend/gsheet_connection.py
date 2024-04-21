@@ -9,6 +9,7 @@ Columns are letters
 Rows are numbers-1
 '''
 
+
 def letter_to_index(letter):
     alphabet = list(string.ascii_uppercase)
     extended_alphabet = ["AA", "AB", "AC", "AD", "AE", "AF", "AG", "AH", "AI", "AJ", "AK", "AL", "AM", "AN", "AO", "AP"]
@@ -16,20 +17,23 @@ def letter_to_index(letter):
         alphabet.append(i)
     return alphabet.index(letter)
 
+
 def check_prof(prof):
     if prof == "ã€‡":
         return "Not Proficient"
     else:
         return "Proficient"
 
+
 def get_csv_names():
-    entires = os.listdir("csv/")
+    entires = os.listdir(os.getcwd()[:-14] + "csv")  # changes it to previous directory
     return entires
 
+
 def get_data(csv_name):
-    csv_file = "csv/" + csv_name
+    csv_file = os.getcwd()[:-14] + "csv" + os.sep + csv_name
     csv_data = []
-    with open(csv_file, mode ='r') as file:
+    with open(csv_file, mode='r') as file:
         csvFile = csv.reader(file)
         for lines in csvFile:
             csv_data.append(lines)
@@ -38,25 +42,28 @@ def get_data(csv_name):
     # print(csv_data[row-1][column])
     return csv_data
 
+
 def get_skill_details(csv_data):
     saving_throws = {}
     skills = {}
-    start_row, column_prof, column_mod, column_mod_name = 17, letter_to_index("H"), letter_to_index("I"), letter_to_index("J")
-    start_row -= 1 # Sets it to the right column (want to start at 16 not 17)
+    start_row, column_prof, column_mod, column_mod_name = 17, letter_to_index("H"), letter_to_index(
+        "I"), letter_to_index("J")
+    start_row -= 1  # Sets it to the right column (want to start at 16 not 17)
     for i in range(0, 6):
         prof = check_prof(csv_data[start_row][column_prof])
         modifier = csv_data[start_row][column_mod]
         saving_throws[csv_data[start_row][column_mod_name]] = {"Prof": prof, "Mod": modifier}
         start_row += 1
-    
-    start_row = 24 # Column 25
+
+    start_row = 24  # Column 25
     for i in range(0, 17):
         prof = check_prof(csv_data[start_row][column_prof])
         modifier = csv_data[start_row][column_mod]
         skills[csv_data[start_row][column_mod_name]] = {"Prof": prof, "Mod": modifier}
         start_row += 1
-        
+
     return [saving_throws, skills]
+
 
 def convert_to_list(class_levels):
     temp_string = ""
@@ -76,6 +83,7 @@ def convert_to_list(class_levels):
             temp_string += i
     return class_list
 
+
 def get_details(csv_data, languages):
     character = {}
     name_column = letter_to_index("C")
@@ -85,7 +93,7 @@ def get_details(csv_data, languages):
     ac_column = letter_to_index("R")
     init_column = letter_to_index("V")
     speed_column = letter_to_index("Z")
-    
+
     character_name = csv_data[5][name_column]
     character_level = csv_data[5][total_level_column]
     character_race = csv_data[6][race_class_column]
@@ -95,40 +103,46 @@ def get_details(csv_data, languages):
     character_ac = csv_data[11][ac_column]
     character_init = csv_data[11][init_column]
     character_speed = csv_data[11][speed_column]
-    
-    character[character_name] = {"Level": character_level, "Race": character_race, "classes/levels": character_class_levels, "HP": character_hp, 
-                                 "AC": character_ac, "Init": character_init, "Speed": character_speed, "Languages": languages}
+
+    character[character_name] = {"Level": character_level, "Race": character_race,
+                                 "classes/levels": character_class_levels, "HP": character_hp,
+                                 "AC": character_ac, "Init": character_init, "Speed": character_speed,
+                                 "Languages": languages}
     return character
+
 
 def get_description(csv_data):
     starting_column = letter_to_index("C")
-    row_one = 147 # row 148 on sheet
-    row_two = 149 # row 150 on sheet
+    row_one = 147  # row 148 on sheet
+    row_two = 149  # row 150 on sheet
     json_info = {}
     for i in range(0, 4):
-        json_info[csv_data[row_one+1][starting_column]] = csv_data[row_one][starting_column]
-        json_info[csv_data[row_two+1][starting_column]] = csv_data[row_two][starting_column]
+        json_info[csv_data[row_one + 1][starting_column]] = csv_data[row_one][starting_column]
+        json_info[csv_data[row_two + 1][starting_column]] = csv_data[row_two][starting_column]
         starting_column += 3
     json_info["IMAGE"] = csv_data[175][letter_to_index("C")]
     return json_info
 
+
 def get_ability_modifiers(csv_data):
     column = letter_to_index("C")
-    row = 11 # row 12 on sheet
+    row = 11  # row 12 on sheet
     stats = {}
     for i in range(0, 6):
         stat_name = csv_data[row][column]
-        modifier_amount = csv_data[row+1][column]
-        stat_total = csv_data[row+3][column]
+        modifier_amount = csv_data[row + 1][column]
+        stat_total = csv_data[row + 3][column]
         stats[stat_name] = {"Total": stat_total, "Modifier": modifier_amount}
         row += 5
     return stats
 
+
 def remove_empty_rows_from_list(list_given):
-    for i in range(len(list_given)-1,-1,-1):
+    for i in range(len(list_given) - 1, -1, -1):
         if list_given[i] == "":
             list_given.remove(list_given[i])
     return list_given
+
 
 def get_spell_names(csv_data, level, starting_row):
     first_column = letter_to_index("D")
@@ -161,6 +175,7 @@ def get_spell_names(csv_data, level, starting_row):
         starting_row += 1
     return (remove_empty_rows_from_list(temp_spells), starting_row)
 
+
 def get_spells(csv_data):
     first_column = letter_to_index("D")
     second_column = letter_to_index("U")
@@ -171,19 +186,20 @@ def get_spells(csv_data):
     casting_ability = csv_data[90][letter_to_index("AB")]
     bonus = csv_data[90][letter_to_index("AI")]
     spells = {}
-    spells["Details"] = {"Class": casting_class, "Save DC": dc, "Ability": casting_ability, "Attack Bonus": bonus, "Spells": {}}
-    starting_row = 95 # row 96 on sheet 
+    spells["Details"] = {"Class": casting_class, "Save DC": dc, "Ability": casting_ability, "Attack Bonus": bonus,
+                         "Spells": {}}
+    starting_row = 95  # row 96 on sheet
     for spell_level in range(0, 10):
         temp_spells, starting_row = get_spell_names(csv_data, spell_level, starting_row)
         spells["Details"]["Spells"][str(spell_level)] = temp_spells
         starting_row += 1
 
-    
     return spells
+
 
 def get_languages(csv_data):
     column = letter_to_index("R")
-    row = 44 # row 45 on sheet
+    row = 44  # row 45 on sheet
     language_list = []
     language = csv_data[row][column]
     while language != "":
@@ -192,10 +208,11 @@ def get_languages(csv_data):
         language = csv_data[row][column]
     return language_list
 
+
 def create_details(csv_data):
     languages = get_languages(csv_data)
     character = get_details(csv_data, languages)
-    character_name = list(character.keys())[0] # gets the name of the character
+    character_name = list(character.keys())[0]  # gets the name of the character
     stats = get_ability_modifiers(csv_data)
     character[character_name]["Stats"] = {}
     for stat_name, stat_details in stats.items():
@@ -205,13 +222,15 @@ def create_details(csv_data):
     character[character_name]["Skills"] = skills[1]
     character[character_name]["Casting"] = get_spells(csv_data)
     character[character_name]["Description"] = get_description(csv_data)
-    
+
     create_json(character, character_name)
-    
+
+
 def create_json(character, name):
     print(character)
-    with open(name + ".json", "w") as outfile:
+    with open(os.path.join(os.getcwd()[:-14], name + ".json"), "w") as outfile:
         json.dump(character, outfile)
+
 
 def main():
     avaliable_csvs = get_csv_names()
@@ -219,6 +238,7 @@ def main():
         create_details(get_data(csv_name))
     # data = get_data()
     # create_details(data)
+
 
 main()
 
@@ -230,3 +250,4 @@ main()
 # create_details(data)
 # skill_detail_tuple = get_skill_details(data)
 # print(skill_detail_tuple)
+
