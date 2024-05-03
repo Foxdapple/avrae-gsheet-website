@@ -16,9 +16,9 @@ export default function App(){
         //     </div>
         // </main>
         <main>
-            <div className='h-screen'>
-                <a className='dropdown-button' onClick={() => setOpen(!open)}>click me</a>
-                <div className={open === true ? `${animations.expandDropdown} bg-red-800 overflow-hidden` : `${animations.closeDropdown} bg-red-800 overflow-hidden`}>
+            <a className='dropdown-button' onClick={() => setOpen(!open)}>click me</a>
+            <div className={open === true ? `${animations.expandDropdown} overflow-hidden` : `${animations.closeDropdown} overflow-hidden`}>
+                <div className="bg-red-800">
                     <p>eee</p>
                     <p>eee</p>
                     <p>eee</p>
