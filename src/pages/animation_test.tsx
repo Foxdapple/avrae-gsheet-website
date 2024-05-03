@@ -16,7 +16,7 @@ export default function App(){
         //     </div>
         // </main>
         <main>
-            <a className='dropdown-button' onClick={() => setOpen(!open)}>click me</a>
+            {/* <a className='dropdown-button' onClick={() => setOpen(!open)}>click me</a>
             <div className={open === true ? `${animations.expandDropdown} overflow-hidden` : `${animations.closeDropdown} overflow-hidden`}>
                 <div className="bg-red-800">
                     <p>eee</p>
@@ -25,7 +25,18 @@ export default function App(){
                 </div>
                 
             </div>
-            <div><p className={`${animations.rotate}`}>eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</p></div>
+            <div><p className={`${animations.rotate}`}>eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</p></div> */}
+            <div className="mx-auto grid max-w-6xl items-start gap-5 sm:max-w-4xl sm:grid-cols-1 md:gap-5 lg:max-w-7xl lg:grid-cols-3 ">
+                <div>eee</div>
+                <div>eee</div>
+                <div>eee</div>
+            </div>
+            <hr />
+            <div className="mx-auto grid max-w-6xl items-start gap-5 sm:max-w-4xl sm:grid-cols-1 md:gap-5 lg:max-w-7xl lg:grid-cols-3 ">
+                <div>eee</div>
+                <div>eee</div>
+                <div>eee</div>
+            </div>
         </main>
 
         
