@@ -16,24 +16,6 @@
     }
 }
 
-@keyframes expand-drop-down2 {
-    from {
-        max-height: 0vh;
-    }
-    to {
-        max-height: 100vh; /* approximate max height */
-    }
-}
-
-@keyframes close-drop-down2 {
-    from {
-        max-height: 100vh;
-    }
-    to {
-        max-height: 0vh;
-    }
-}
-
 @keyframes expand-details {
     from {
         width: 0%;
@@ -82,7 +64,7 @@
 }
 
 .expandDropdown2 {
-    animation-name: expand-drop-down2;
+    animation-name: expand-drop-down;
     animation-duration: 7000ms;
     animation-timing-function: cubic-bezier(0.25, 0.3, 0.15, 1.0);;
     animation-delay: 0ms;
@@ -90,7 +72,7 @@
 }
 
 .closeDropdown2 {
-    animation-name: close-drop-down2;
+    animation-name: close-drop-down;
     animation-duration: 1000ms;
     animation-timing-function: cubic-bezier(0.25, 0.3, 0.15, 1.0);;
     animation-delay: 0ms;

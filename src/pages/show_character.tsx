@@ -52,7 +52,7 @@ export default function App() {
 
   const showspells = () => {
     setButton2(!dropButton2);
-    setOpenSpell(!openSkills);
+    setOpenSpell(!openSpells);
   }
 
 

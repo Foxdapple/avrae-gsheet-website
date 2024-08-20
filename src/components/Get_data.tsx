@@ -58,48 +58,34 @@ export default function Get_data(file: jsonData, character: string) {
         }
     }
 
-    // function get_spell_information(file: jsonData, character: string){
-    //     const section = typeof document !== 'undefined' && document.getElementById("character-spells");
-    //     const spells_json_location = file[character]["Casting"]["Details"]["Spells"];
-    //     for (let i = 0; i < Object.keys(spells_json_location).length; i++){
-    //         // console.log(spells_json_location[i]);
-    //         spells_json_location[i].forEach(function (item: string){
-    //             console.log(i, item);
-    //             // checks to see if a row has been finished
-    //             if (spells_json_location[i].indexOf(item) % 3 == 0){
-
-    //             }
-    //             if (section != null && section != false){
-    //                 section.innerHTML += `<div><p>${i}: ${item}</p></div>`;
-    //             }
-    //         })
-    //     }
-    //     if (section != null && section != false){
-    //         section.innerHTML += "<hr />";
-    //     }
-    // }
-
     function get_spell_information(file: jsonData, character: string){
         const spell_area = typeof document !== 'undefined' && document.getElementById("spell-section");
+        if (spell_area != null && spell_area != false){
+            spell_area.innerHTML = "";
+        }
         const spells_json_location = file[character]["Casting"]["Details"]["Spells"];
         for (let i = 0; i < Object.keys(spells_json_location).length; i++){
             if (spells_json_location[i].length == 0){
                 continue;
+            }
+            if (i > 0){
+                if (spell_area != null && spell_area != false){
+                    spell_area.innerHTML += `<hr /><h1 class="text-xl"><b>Level: ${i}</b></h1>`;
+                }
             }
             if (spell_area != null && spell_area != false){
                 spell_area.innerHTML += 
                 `<div class="mx-auto grid max-w-6xl items-start gap-5 sm:max-w-4xl sm:grid-cols-1 md:gap-5 lg:max-w-7xl lg:grid-cols-3" id="character-spells-${i}"></div>`;
             }
             let section = typeof document !== 'undefined' && document.getElementById(`character-spells-${i}`);
+            var spells_to_add = "";
             // console.log(spells_json_location[i]);
             spells_json_location[i].forEach(function (item: string){
+                spells_to_add += `<div>${item}</div>`;
                 if (section != null && section != false){
-                    section.innerHTML += `<div>${i}: ${item}</div>`;
+                    section.innerHTML = spells_to_add;
                 }
             })
-            if (spell_area != null && spell_area != false){
-                spell_area.innerHTML += `<hr /><h1 class="text-xl"><b>Level: ${i+1}</b></h1>`;
-            }
         }
     }
 }
