@@ -71,6 +71,9 @@ export default function App() {
       </Head>
       <main className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}>
         <div className="mx-auto grid max-w-6xl items-start gap-5 sm:max-w-4xl sm:grid-cols-2 md:gap-5 lg:max-w-7xl lg:grid-cols-2 ">
+          <div id="hover-box" className="hidden">
+            {/* Content added from Get_data.tsx */}
+          </div>
           
           {/* left side of page */}
 
@@ -132,6 +135,7 @@ export default function App() {
                 <div className={openSkills === true ? `${animations.expandDropdown} overflow-hidden` : `${animations.closeDropdown} overflow-hidden`}> {/* keep set to hidden if not in use (like the other animation in animation_test*/}
                   {/* add a new div for each new row (keep to maybe 3 skills a row) */}
                   <div className="overflow-hidden">
+                    {/* Content added from Get_data.tsx */}
                       <p>eee</p>
                       <p>eee</p>
                       <p>eee</p>
@@ -152,10 +156,11 @@ export default function App() {
                       width={63}
                       height={25}
                       priority
-                    /></h1>
+                    />{/* Content added from Get_data.tsx */}</h1>
                 <hr />
                 <div className={openSpells === true ? `${animations.expandDropdown2} overflow-hidden` : `${animations.closeDropdown2} overflow-hidden`} id="spell-section"> {/* keep set to hidden if not in use (like the other animation in animation_test*/}
                   {/* add a new div for each new row (keep to maybe 3 skills a row) */}
+                  {/* Content added from Get_data.tsx */}
                   <h1 className="text-xl"><b>Cantrips:</b></h1>
                 </div>
                 
